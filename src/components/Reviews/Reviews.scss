@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700;900&family=Poppins:wght@100;200;300;500;600;700;800;900&family=Roboto:wght@100;400;500;700;900&display=swap');
+
+/* All project colors */
+
+:root {
+    --primaryColor: hsl(359, 70%, 47%); 
+    --primaryColorLight: hsl(14, 96%, 91%);
+    --bgColor: hsl(0, 0%, 100%);
+    --formColor: hsl(20, 42%, 87%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 0%);
+    --greyText: hsl(0, 0%, 51%);
+    --inputColor: hsl(330, 12%, 97%);
+    --cardColor: hsl(300, 3%, 94%);
+
+    /* font & typography */
+    --bigestFontSize: 2.5rem;
+    --h1FontSize: 2rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: 0.938rem;
+    --smallFontSize: 0.813rem;
+    --smallestFontSize: 0.75rem;
+    --borderRadius: 3rem;
+}
+
+.review {
+    .secContainer {
+        .textDiv {
+            .redText {
+                font-size: var(--smallFontSize);
+                display: block;
+                color: var(--primaryColor);
+                font-weight: 700;
+            }
+
+            h3 {
+                font-size: var(--h2FontSize);
+                color: var(--blackColor);
+                padding: 1rem 0;
+            }
+
+            p {
+                color: var(--blackColor);
+            }
+
+            .stars {
+                gap: .4rem;
+                padding: 1rem 0;
+
+                .icon {
+                    color: var(--primaryColor);
+                    font-size: var(--h3FontSize);
+                }
+            }
+
+            .clientsimages {
+                gap: 1rem;
+
+                img {
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    border: 2px solid rgb(255, 255, 255);
+                    box-shadow: 0 0 2px 2px rgb(251, 212, 194);
+                }
+            }
+        }
+
+        .imgDiv {
+            height: 250px;
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            img{
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+/* media queries */
+@media screen and (min-width: 480px) {
+    .review{
+        .secContainer {
+            .textDiv{
+                .redText{
+                    font-size: var(--normalFontSize);
+                }
+                h3{
+                    font-size: 20px;
+                    color: var(--blackColor);
+                }
+                p{
+                    color: var(--blackColor);
+                    font-size: var(--normalFontSize);
+                }
+                .stars{
+                    .icon{
+                        font-size: var(--h2FontSize);
+                    }
+                }
+                .clientsimages{
+                    img{
+                        height: 50px;
+                        width: 50px;
+                    }
+                }
+            }
+
+            .imgDiv{
+                height: 250px;
+                width: 100%;
+                img{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 740px){
+    .review{
+        .secContainer{
+            grid-template-columns: repeat(2,1fr);
+            .textDiv{
+                .redText{
+                    font-size: var(--normalFontSize);
+                }
+                h3{
+                    font-size: 20px;
+                    color: var(--normalFontSize);
+                }
+                p{
+                    color: var(--blackColor);
+                    font-size: var(--normalFontSize);
+                }
+                .stars{
+                    .icon{
+                        font-size: var(--h2FontSize);
+                    }
+                }
+                .clientsImages{
+                    img{
+                        height: 50px;
+                        width: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1240px){
+    .review{
+        .secContainer{
+            gap: 3rem;
+            .textDiv{
+                .redText{
+                    font-size: var(--h3FontSize);
+                }
+                h3{
+                    font-size: var(--h1FontSize);
+                    color: var(--blackColor);
+                }
+                p{
+                    color: var(--blackColor);
+                    font-size: var(--h3FontSize);
+                    line-height: 2rem;
+                }
+            }
+            .imgDiv{
+                height: 300px;
+            }
+        }
+    }
+}

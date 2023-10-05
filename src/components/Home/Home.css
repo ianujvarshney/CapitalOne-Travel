@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700;900&family=Poppins:wght@100;200;300;500;600;700;800;900&family=Roboto:wght@100;400;500;700;900&display=swap");
+/* All project colors */
+:root {
+  --primaryColor: hsl(359, 70%, 47%);
+  --primaryColorLight: hsl(14, 96%, 91%);
+  --bgColor: hsl(0, 0%, 100%);
+  --formColor: hsl(20, 42%, 87%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 0%);
+  --greyText: hsl(0, 0%, 51%);
+  --inputColor: hsl(330, 12%, 97%);
+  --cardColor: hsl(300, 3%, 94%);
+  /* font & typography */
+  --bigestFontSize: 2.5rem;
+  --h1FontSize: 2rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+  --borderRadius: 3rem;
+}
+
+.Home {
+  position: relative;
+  height: 95vh;
+  width: 100%;
+  top: 0;
+}
+.Home .videoBg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.Home .videoBg video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.sectionText {
+  position: absolute;
+  height: 100%;
+  top: 30%;
+  bottom: 50%;
+  color: var(--whiteColor);
+  padding: 0 1.3rem;
+}
+.sectionText h1 {
+  font-size: var(--bigestFontSize);
+  font-weight: 900;
+}
+.sectionText p {
+  padding: 1rem 0;
+  font-size: var(--normalFontSize);
+  font-weight: 500;
+}
+.sectionText .btn {
+  gap: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: var(--h3FontSize);
+}
+
+.popularPlaces {
+  display: none;
+}
+
+/* Media Queries */
+@media screen and (min-width: 769px) {
+  .Home .sectionText {
+    padding: 0 2rem;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+  .Home .sectionText h1 {
+    font-size: var(--bigestFontSize);
+    font-weight: 900;
+  }
+  .Home .sectionText p {
+    padding: 1rem 0;
+    font-size: var(--h2FontSize);
+    max-width: 70%;
+    margin: auto;
+  }
+  .Home .sectionText .btn {
+    font-size: var(--h3FontSize);
+    margin: auto;
+  }
+}
+@media screen and (min-width: 769px) {
+  Home .sectionText {
+    width: 100%;
+  }
+  Home .sectionText h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    max-width: 70%;
+    margin: auto;
+  }
+  Home .sectionText p {
+    padding: 1rem 0;
+    font-size: var(--h2FontSize);
+    max-width: 70%;
+    margin: auto;
+  }
+  Home .sectionText .btn {
+    gap: 0.5rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    font-size: var(--h3FontSize);
+    margin: auto;
+  }
+}
+@media screen and (min-width: 1040px) {
+  .Home {
+    position: relative;
+  }
+  .Home .sectionText h1 {
+    font-size: 4.5rem;
+    font-weight: 900;
+    max-width: 70%;
+    margin: auto;
+  }
+  .Home .popularPlaces {
+    display: block;
+    position: absolute;
+    bottom: 6%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Home .popularPlaces .content h3 {
+    color: var(--whiteColor);
+    padding: 1rem 0;
+    position: relative;
+  }
+  .Home .popularPlaces .content h3::after {
+    content: "";
+    width: 83%;
+    height: 2px;
+    background: rgb(202, 202, 202);
+    right: 0;
+    bottom: 50%;
+    position: absolute;
+  }
+  .Home .popularPlaces .content .images {
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .Home .popularPlaces .content .images img {
+    height: 100px;
+    width: 210px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 10px;
+  }
+}/*# sourceMappingURL=Home.css.map */
